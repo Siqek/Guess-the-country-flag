@@ -1,0 +1,54 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80vh 20vh;
+    grid-template-areas: 
+    "game"
+    "interface";
+
+    background-color: rgb(19, 19, 19);
+    margin: 0px;
+}
+
+div {
+    border: 2px solid olive;
+}
+
+#div_game {
+    grid-area: game;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: 
+    "country_name"
+    "flags";
+}
+
+#div_country_name {
+    grid-area: country_name;
+    border: 0px;
+    border-bottom: 2px solid olive;
+}
+
+#div_flags {
+    grid-area: flags;
+    border: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flags {
+    height: 300px;
+    width: 200px;
+
+    border-radius: 20px;
+}
+
+#div_interface {
+    grid-area: interface;
+    border-top: 0px;
+}
