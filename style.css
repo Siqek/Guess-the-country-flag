@@ -1,17 +1,18 @@
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 80vh 20vh;
+    grid-template-rows: calc(80vh - 2px) calc(20vh - 2px);
     grid-template-areas: 
     "game"
     "interface";
 
     background-color: rgb(19, 19, 19);
     margin: 0px;
+    border: 2px solid olive;
 }
 
-div {
-    border: 2px solid olive;
+* {
+    color: olive;
 }
 
 #div_game {
@@ -23,12 +24,18 @@ div {
     grid-template-areas: 
     "country_name"
     "flags";
+
+    border-bottom: 2px solid olive;
+    display: none;
 }
 
 #div_country_name {
     grid-area: country_name;
     border: 0px;
     border-bottom: 2px solid olive;
+
+    display: grid;
+    place-items: center;
 }
 
 #div_flags {
@@ -41,14 +48,76 @@ div {
     align-items: center;
 }
 
-.flags {
-    height: 300px;
-    width: 200px;
-
+.divs_flags {
+    height: 270px;
+    width: 270px;
+    
+    display: grid;
+    place-items: center;
+    
+    border: 2px solid olive;
     border-radius: 20px;
+}
+
+.flags {
+    height: 120px;
+
+    margin-bottom: 20px;
 }
 
 #div_interface {
     grid-area: interface;
     border-top: 0px;
+
+    display: grid;
+    place-items: center;
+
+    display: none;
+}
+
+#health_bar {
+    color: red;
+    font-size: 200%;
+    position: fixed;
+    top: 0px;
+    right: 90px;
+
+    z-index: 1;
+}
+
+#button_start {
+    position: fixed;
+    top: calc(50% - 40px);
+    left: 45%;
+    right: 45%;
+
+    height: 60px;
+
+    background-color: rgb(19, 19, 19);
+    border: 2px solid olive;
+    border-radius: 20px;
+
+    font-size: 160%;
+}
+
+#p_pkt {
+    font-size: 180%;
+}
+
+#final_score {
+    font-size: 180%;
+}
+
+#div_end {
+    grid-area: game;
+    padding-top: 250px;
+
+    display: grid;
+    place-items: center;
+
+    display: none;
+}
+
+h2 {
+    font-size: 50px;
 }
