@@ -131,3 +131,11 @@ h2 {
 
     font-size: 160%;
 }
+
+#title {
+    position: fixed;
+    top: 26%;
+    right: 30%;
+    left: 30%;
+    text-align: center;
+}
