@@ -173,3 +173,20 @@ async function start(){
     document.getElementById("div_game").style.display = "grid"
     document.getElementById("div_interface").style.display = "grid"
 }
+
+function restart(){
+    const health_bar = document.getElementById("health_bar")
+    health_bar.innerHTML = ""
+    
+    hp = 3
+    pkt = 0
+    
+    for (var i=0;i<hp;i++){
+        health_bar.innerHTML += "❤"
+    }
+
+    document.getElementById("div_game").style.display = "grid"
+    document.getElementById("div_interface").style.display = "grid"
+    document.getElementById("div_end").style.display = "none"
+    document.getElementById("p_pkt").innerHTML = "Twój wynik: 0"
+}
